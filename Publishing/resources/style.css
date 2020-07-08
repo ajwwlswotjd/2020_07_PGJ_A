@@ -24,6 +24,7 @@ li {
 header {
 	width: 100%;
 	height: 80px;
+	position: relative;
 	border-bottom: 1px solid #ddd;
 }
 
@@ -911,4 +912,153 @@ section#review {
 	font-size: 13px;
 	font-weight: 500;
 	margin-left: 2px;
+}
+
+footer {
+	width: 100%;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #f4f5f9;
+	background-color: #333030;
+	font-size: 14px;
+}
+
+.mobile-nav {
+	display: none;
+}
+
+
+.mobile-nav-btn {
+	display: none;
+}
+
+@media (max-width: 480px) and (min-width: 240px){
+	
+	nav {
+		display: none !important;
+	}
+
+	.header-container {
+		width: 80%;
+	}
+
+	.mobile-nav {
+		width: 200px;
+		position: fixed;
+		display: block;
+		z-index: 100;
+		right: -200px;
+		transition: right .4s;
+		top: 0;
+	}
+
+	.mobile-nav > li:last-child {
+		border-bottom: none;
+	}
+
+	.mobile-nav > li {
+		width: 100%;
+		background-color: #333030;
+		position: relative;
+		height: 40px;
+		border-bottom: 1px solid #fff;
+		display: flex;
+		align-items: center;
+	}
+
+	.mobile-nav > li.mobile-active > a::before {
+		content: '';
+		width: 5px;
+		height: 5px;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 10px;
+		border-radius: 100%;
+		background-color: #fff;
+	}
+
+	.mobile-nav > li > a {
+		color: #f4f5f9;
+		font-size: 13px;
+		margin-left: 25px;
+	}
+
+	.mobile-nav-btn {
+		display: inline-block;
+		position: absolute;
+		right: -30px;
+		cursor: pointer;
+		font-size: 25px;
+		color: #333030;
+	}
+
+	.mobile-nav:hover,
+	.mobile-nav-btn:hover ~ .mobile-nav {
+		right: 0;
+	}
+
+	body {
+		overflow-x: hidden;
+	}
+
+	.slide-text-title {
+		font-size: 23px;
+	}
+
+	.slide-text-top {
+		font-size: 12px;
+	}
+
+	.slide-text-bottom {
+		font-size: 12px;
+	}
+
+	#visual {
+		height: 350px;
+	}
+
+	.visual-content-container {
+		width: 80%;
+	}
+
+	.visual-content-item > i {
+		font-size: 40px;
+		margin-right: 5px;
+	}
+
+	.visual-content-item > p {
+		font-size: 10px;
+	}
+
+	.visual-content-item > p > span {
+		font-size: 17px;
+	}
+
+	.warm-title {
+		font-size: 20px;
+	}
+
+	#warm {
+		height: 700px;
+	}
+
+	.warm-list > .div-wrapper {
+		display: grid;
+		grid-template-columns: repeat(2,1fr);
+		grid-template-rows: repeat(2,1fr);
+		grid-gap: 15px;
+	}
+
+	.warm-list {
+		height: 530px;
+		top: 50%;
+	}
+
+	.warm-item {
+		width: 200px;
+		height: 250px;
+	}
 }
