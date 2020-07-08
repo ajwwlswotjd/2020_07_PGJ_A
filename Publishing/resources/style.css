@@ -1001,7 +1001,7 @@ footer {
 	}
 
 	body {
-		overflow-x: hidden;
+		/*overflow-x: hidden;*/
 	}
 
 	.slide-text-title {
@@ -1046,19 +1046,84 @@ footer {
 	}
 
 	.warm-list > .div-wrapper {
-		display: grid;
 		grid-template-columns: repeat(2,1fr);
 		grid-template-rows: repeat(2,1fr);
-		grid-gap: 15px;
+		grid-gap: 10px;
+		display: grid;
 	}
 
 	.warm-list {
 		height: 530px;
-		top: 50%;
+		width: 420px;
 	}
 
 	.warm-item {
 		width: 200px;
 		height: 250px;
+		/*background-color: #000;*/
+	}
+
+	section#exp {
+		height: 700px;
+	}
+
+	.exp-list {
+		width: 420px;
+		height: 530px;
+	}
+
+	.more-link {
+		width: 420px;
+		text-align: center;
+		margin-top: 5px;
+	}
+
+	.exp-list > .div-wrapper {
+		display: grid;
+		grid-gap: 10px;
+		grid-template-columns: repeat(2,1fr);
+		grid-template-rows: repeat(2,1fr);
+	}
+
+	.review-inner {
+		width: 420px;
+	}
+
+	.review-inner > .div-wrapper {
+		display: grid;
+		grid-template-rows: repeat(2,1fr);
+		grid-template-columns: repeat(1,1fr);
+	}
+
+	.review-inner > .div-wrapper > div {
+		width: 100%;
+	}
+
+	section#review {
+		height: 1000px;
+	}
+
+	.review-inner > .div-wrapper > div {
+		flex-direction: column;
+	}
+
+	.rev-ul {
+		width: 350px;
+		left: 0;
+		grid-gap: 15px;
+		display: grid;
+		grid-template-columns: repeat(2,1fr);
+		grid-template-rows: repeat(2,1fr);
+	}
+	.review-inner {
+		top: 55%;
+		height: 80%;
+	}
+
+	footer {
+		font-size: 11px;
+		height: 40px;
 	}
 }
+
+
